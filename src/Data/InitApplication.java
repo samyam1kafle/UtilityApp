@@ -1,5 +1,6 @@
 package Data;
 
+import Data.Client.LMSInit;
 import Data.models.Notepad;
 import Data.models.ToDo;
 
@@ -14,7 +15,7 @@ public class InitApplication {
 
     private static String divider = "-".repeat(40);
     public static void init() {
-        System.out.println("Welcome to Utility Tools!\nPlease select which app you want to use. \nType [N] for Notepad and [T] for Todo list! ");
+        System.out.println("Welcome to Utility Tools!\nPlease select which app you want to use. \nType [N] for Notepad, [T] for Todo list! and [L] for Library Management System!!! ");
         try{
             char userChoice = scanner.next().charAt(0);
             char toLower = Character.toLowerCase(userChoice);
@@ -22,6 +23,8 @@ public class InitApplication {
                 initTodo(toLower);
             } else if (toLower == 'n') {
                 initNotepad(toLower);
+            }  else if (toLower == 'l') {
+                initLMS(toLower);
             } else {
                 System.out.println("Invalid selection please select again");
                 System.out.println(divider);
@@ -31,6 +34,11 @@ public class InitApplication {
             System.out.println("Something went wrong!");
             e.printStackTrace();
         }
+    }
+
+    private static void initLMS(char toLower) {
+        LMSInit init = new LMSInit();
+        init.initApp();
     }
 
     private static void initNotepad(char menuFor) {

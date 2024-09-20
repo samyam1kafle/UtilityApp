@@ -7,8 +7,7 @@ public class Book {
     private String title;
     private String authorName;
 
-    public Book() {
-    }
+    public Book() {}
 
     public Book(int quantity, String title, String authorName) {
         this.id = this.counter;

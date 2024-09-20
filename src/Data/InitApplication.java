@@ -1,6 +1,6 @@
 package Data;
 
-import Data.Client.LMSInit;
+import Data.Client.LmsInit;
 import Data.models.Notepad;
 import Data.models.ToDo;
 
@@ -37,8 +37,8 @@ public class InitApplication {
     }
 
     private static void initLMS(char toLower) {
-        LMSInit init = new LMSInit();
-        init.initApp();
+        LmsInit init = new LmsInit();
+        init.initialize();
     }
 
     private static void initNotepad(char menuFor) {

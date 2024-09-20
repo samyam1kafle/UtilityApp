@@ -22,7 +22,6 @@ public class User {
 
     private int noOfBooksTaken;
 
-    public User(){}
     public User(User user) {
         this.id = user.id;
         this.username = user.username;

@@ -44,14 +44,10 @@ public class AuthServiceImpl implements UserInterface {
         User user = getInputAndRegister();
         if (user.getRole().equals(Constants.STUDENT)) {
             Student stu = createStudentsData(user);
-            if(stu instanceof Student) {
-                return stu;
-            }
+            return stu;
         } else if(user.getRole().equals(Constants.TEACHER)) {
             Teacher teacher = createTeacherData(user);
-            if(teacher instanceof Teacher) {
-                return teacher;
-            }
+            return teacher;
         }
         return user;
     }
